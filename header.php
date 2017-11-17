@@ -53,17 +53,68 @@
 					<?php if ( is_active_sidebar( 'socials' ) ) : ?>
 	        <div class="socials">
 	          <?php dynamic_sidebar( 'socials' ); ?>
-	        </div><!-- #socials -->
+	        </div><!-- .socials -->
 	    		<?php endif; ?>
     		</div>
 				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'primland' ); ?></button>
+					<button class="menu-toggle" id="nav-icon" aria-controls="primary-menu" aria-expanded="false">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<div class="nav-menu menu-holder">
+						<img src="/wp-content/uploads/2017/11/primland-logo.png" class="small-only">
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',
 						) );
 					?>
+					<hr class="small-only">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-4',
+							'menu_id'        => 'secondary-menu-mobile',
+							'menu_class'		 => 'small-only'
+						) );
+					?>
+					<hr class="small-only">
+					<?php
+	          wp_nav_menu( array(
+	            'theme_location' => 'menu-3',
+	            'menu_id'        => 'quick-links-mobile',
+	            'menu_class'		 => 'small-only'
+	          ) );
+        	?>
+					<hr class="small-only">
+					<?php
+	          wp_nav_menu( array(
+	            'theme_location' => 'menu-2',
+	            'menu_id'        => 'footer-menu-mobile',
+	            'menu_class'		 => 'small-only'
+	          ) );
+        	?>
+        	<div class="box-cta small-only">
+        		<h4>Plan Your Perfect Stay</h4>
+        		<a href="#" class="button">Start Now</a>
+        	</div>
+        	<div class="box-cta small-only">
+        		<h4>Stay Updated</h4>
+        		<p>Join our Mailing List for the latest Events and Offers</p>
+        		<a href="#" class="button">Subscribe</a>
+        	</div>
+        	<?php if ( is_active_sidebar( 'mobile-widgets' ) ) : ?>
+					    <div id="mobile-widgets" class="mobile-widgets small-only">
+					      <?php dynamic_sidebar( 'mobile-widgets' ); ?>
+					    </div><!-- #primary-sidebar -->
+					<?php endif; ?>
+					<?php if ( is_active_sidebar( 'socials' ) ) : ?>
+        		<div id="menu-socials" class="small-only">
+		          <?php dynamic_sidebar( 'socials' ); ?>
+		        </div><!-- ,socials -->
+		    	<?php endif; ?>
+					</div><!-- .menu-holder -->
 				</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
