@@ -889,6 +889,9 @@ object {
 	color: #ad926d;
 	border-bottom: solid 2px white;
 }
+.button:visited {
+	color: white;
+}
 a.button.dark {
 	color: #262626;
 }
@@ -1113,6 +1116,10 @@ h2.fl-post-slider-title {
 	font-weight: 300;
 	font-size: 32px;
 }
+.no-pad {
+	padding: 0;
+	margin: 0;
+}
 /*experience page */
 .attr {
 	text-align: right;
@@ -1120,6 +1127,9 @@ h2.fl-post-slider-title {
 /* helper classes */
 .caps {
 	text-transform: uppercase;
+}
+.link a {
+	text-decoration: none;
 }
 .small-only, .small-only * {
 	display: none;
